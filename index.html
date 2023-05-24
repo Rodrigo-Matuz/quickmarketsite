@@ -1,0 +1,136 @@
+<!-- @format -->
+
+<html>
+    <head>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                background-color: rgb(38, 38, 38);
+                color: white;
+            }
+
+            header h2 {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgb(148, 42, 42);
+                text-align: center;
+                color: rgb(255, 255, 255);
+                padding: 10px 0;
+                border: solid rgb(148, 42, 42) 10px;
+                font-size: 30px;
+            }
+            .registration-list {
+                padding-top: 80px;
+                display: flex;
+                margin: 20px 0;
+                width: 100%;
+            }
+            .registration-list input[type="text"] {
+                flex: 1;
+                font-size: 20px;
+                padding-left: 10px;
+                border-right: 0;
+                border-left: 0;
+                border-top: 0;
+                margin: 10px;
+                width: 100%;
+            }
+            .registration-list input[type="text"]:focus {
+                outline: none;
+                border-color: rgb(148, 42, 42);
+            }
+            .registration-list input[type="submit"] {
+                box-shadow: none;
+                border: none;
+                outline: none;
+                border-radius: 40px;
+                width: 100px;
+                margin-right: 10px;
+                height: 50px;
+                background-color: rgb(148, 42, 42);
+            }
+            .registration-list input[type="submit"]:active {
+                background-color: rgb(95, 1, 1);
+            }
+            .list-products-single {
+                cursor: pointer;
+                padding: 10px;
+                border-bottom: 1px solid rgb(93, 93, 93);
+                display: flex;
+            }
+            .list-products-single h2 {
+                padding: 10px 10;
+                flex: 1;
+            }
+            .list-products-single span {
+                background-color: rgb(148, 42, 42);
+                padding: 10px;
+                border-radius: 20px;
+                margin-right: 10px;
+            }
+            .product-title {
+                font: bold 25px "Arial";
+            }
+            .product-price {
+                margin-top: 5px;
+                text-align: right;
+                font: small-caps 15px "Arial";
+            }
+            .total-value h2 {
+                display: flex;
+                align-items: center;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: rgb(148, 42, 42);
+                height: 80px;
+                text-align: center;
+                font-size: 40px;
+                padding: 20px;
+            }
+            .total-value span {
+                background-color: rgb(148, 42, 42);
+            }
+            .total-value customButton {
+                cursor: pointer;
+                margin-left: 80;
+                background-color: rgb(148, 42, 42);
+                font-size: 25px;
+                padding: 8px;
+                border: solid rgb(255, 255, 255);
+                border-radius: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Supermarket List</h2>
+        </header>
+        <div class="registration-list">
+            <input
+                type="text"
+                name="product_name"
+                placeholder="product name..."
+            />
+            <input
+                type="text"
+                name="product_value"
+                placeholder="product value..."
+            />
+            <input type="submit" name="submit-button" value="Submit" />
+        </div>
+        <div class="list-products"></div>
+        <div class="total-value">
+            <h2>
+                Total: $<span>0</span>
+                <customButton name="clear">Clear</customButton>
+            </h2>
+        </div>
+        <script src="JavaScript.js"></script>
+    </body>
+</html>
